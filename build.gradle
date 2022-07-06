@@ -1,0 +1,20 @@
+plugins {
+    id 'com.github.spotbugs' version '4.6.2'
+    id 'ata-curriculum.snippets-conventions'
+}
+
+repositories {
+    maven {
+        url = uri("https://maven.pkg.github.com/KenzieAcademy-SoftwareEngineering/kenzie-java-test-infrastructure")
+        credentials {
+            username = "kenzie-gradle"
+            password = "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"
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.kenzie:kenzieresources:1.0.1'
+    
+    testImplementation('com.kenzie:testinfrastructure:1.0-SNAPSHOT')
+}
