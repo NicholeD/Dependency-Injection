@@ -9,6 +9,7 @@ public class EmployeePaymentDistributor {
     /**
      * Constructor for Employee class.
      */
+    @Inject
     public EmployeePaymentDistributor(PayrollTracker payrollTracker) {
         this.payrollTracker = payrollTracker;
     }

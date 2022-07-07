@@ -1,11 +1,15 @@
 package com.kenzie.dependencyinjection.payroll;
 
+import dagger.Module;
+import dagger.Provides;
+
 import java.math.BigDecimal;
 
 /**
  * The BankClient which connects to our company's bank
  * to retrieve our payroll account.
  */
+
 public class BankClient {
     private BigDecimal balance = BigDecimal.valueOf(100000);
 

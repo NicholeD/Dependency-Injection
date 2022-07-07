@@ -9,11 +9,6 @@ public class PayrollManager {
      * @param args Main method parameter
      */
     public static void main(String[] args) {
-        // TODO: You should have 3 lines of code included here to construct a BankClient, PayrollTracker, and EmployeePaymentDistributor objects
-
-
-
-
         runPayroll();
     }
 

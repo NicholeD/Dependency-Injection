@@ -4,6 +4,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
+import org.mockito.junit.jupiter.MockitoSettings;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
@@ -16,14 +18,15 @@ import static org.mockito.MockitoAnnotations.initMocks;
 public class EmployeePaymentDistributorTest {
     private EmployeePaymentDistributor employeePaymentDistributor;
 
+    @Mock
     private PayrollTracker payrollTracker;
 
     private BankClient bankClient;
 
     @BeforeEach
     public void setup() {
+        MockitoAnnotations.initMocks(this);
         bankClient = new BankClient();
-        payrollTracker = new PayrollTracker(bankClient);
         employeePaymentDistributor = new EmployeePaymentDistributor(payrollTracker);
     }
 
@@ -34,6 +37,10 @@ public class EmployeePaymentDistributorTest {
         Employee employee = new Employee(salary);
 
         employeePaymentDistributor.payEmployee(employee);
+        Set<Employee> paidEmployees = new HashSet<>();
+        paidEmployees.add(employee);
+
+        when(payrollTracker.getPaidEmployees()).thenReturn(paidEmployees);
 
         // WHEN we check if an employee has been paid
         boolean hasBeenPaid = employeePaymentDistributor.employeeHasBeenPaid(employee);
