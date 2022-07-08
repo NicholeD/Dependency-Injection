@@ -18,22 +18,22 @@ public class ProfileableLinkedList implements ProfileableList {
 
     @Override
     public void addFirst(Double data) {
-        throw new UnsupportedOperationException();
+        this.list.add(0, data);
     }
 
     @Override
     public void addLast(Double data) {
-        throw new UnsupportedOperationException();
+        this.list.add(data);
     }
 
     @Override
     public Double getFirst() {
-        throw new UnsupportedOperationException();
+        return this.list.get(0);
     }
 
     @Override
     public Double getMiddle() {
-        throw new UnsupportedOperationException();
+        return this.list.get(list.size() / 2);
     }
 
     @Override
@@ -43,6 +43,6 @@ public class ProfileableLinkedList implements ProfileableList {
 
     @Override
     public void addAll(Collection<Double> collection) {
-        // TODO: implement this
+        this.list.addAll(collection);
     }
 }

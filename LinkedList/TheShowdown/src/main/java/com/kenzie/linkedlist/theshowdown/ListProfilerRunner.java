@@ -8,7 +8,6 @@ public class ListProfilerRunner {
 
         listProfiler.withListToProfile(new ProfileableArrayList());
         listProfiler.withListToProfile(new ProfileableLinkedList());
-        listProfiler.withListToProfile(new LinkedList());
         listProfiler.profileLists();
     }
 }
