@@ -2,6 +2,7 @@ package com.kenzie.searching.packagesearch;
 
 import java.util.List;
 
+
 /**
  * Manages a list of AmazonPackages.
  * Individual packages can be found by ASIN.
@@ -24,8 +25,12 @@ public class AmazonOrderService {
      * @return the Amazon Package with the target ASIN
      */
     public AmazonPackage findPackageLinear(String asin) throws PackageNotFoundException {
-        // PARTICIPANTS - Implement a linear search for a package matching the requested ASIN
-        return packages.get(0);
+        for (AmazonPackage pack : packages) {
+            if (pack.getAsin().equals(asin)) {
+                return pack;
+            }
+        }
+        throw new PackageNotFoundException("There is not a package with that ASIN");
     }
 
     /**
@@ -35,6 +40,30 @@ public class AmazonOrderService {
      * @return the Amazon Package with the target ASIN
      */
     public AmazonPackage findPackageBinary(String asin) throws PackageNotFoundException {
-        return packages.get(0);
+        int firstIndex = 0;
+        int lastIndex = packages.size() - 1;
+        AmazonPackage result = null;
+
+        for (int i = 0; i < packages.size(); i++) {
+            //Finding the middle index of list
+            int mid = firstIndex + ((lastIndex - firstIndex) / 2);
+            //Camparing asin's lexicographically to determine new list to search in
+            if (packages.get(mid).getAsin().compareTo(asin) < 0) {
+                firstIndex = mid + 1;
+                result = packages.get(mid);
+            } else if (packages.get(mid).getAsin().compareTo(asin) > 0) {
+                lastIndex = mid -1;
+                result = packages.get(mid);
+            } else if (packages.get(mid).getAsin().compareTo(asin) == 0) {
+                result = packages.get(mid);
+                break;
+            }
+        }
+
+        if (packages.isEmpty() || !result.getAsin().equals(asin)) {
+            throw new PackageNotFoundException("The package you're looking for could not be found.");
+        } else {
+            return result;
+        }
     }
 }
