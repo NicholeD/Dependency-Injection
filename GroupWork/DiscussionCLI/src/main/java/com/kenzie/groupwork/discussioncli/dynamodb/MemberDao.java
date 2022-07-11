@@ -14,6 +14,7 @@ public class MemberDao {
      * Creates a MemberDao with the given DynamoDBMapper.
      * @param mapper The DynamoDBMapper
      */
+    @Inject
     public MemberDao(DynamoDBMapper mapper) {
         this.mapper = mapper;
     }

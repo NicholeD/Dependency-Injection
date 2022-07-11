@@ -7,6 +7,7 @@ import com.kenzie.input.console.ATAUserInput;
 import com.kenzie.string.TextTable;
 
 import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.List;
 /**
  * Handler for the VIEW_TOPICS operation.
  */
+
 public class ViewTopicsHandler implements DiscussionCliOperationHandler {
     private static final int MAX_NUM_TOPICS_TO_VIEW = 100;
 
@@ -25,6 +27,7 @@ public class ViewTopicsHandler implements DiscussionCliOperationHandler {
      * @param topicDao The TopicDao
      * @param userHandler the ATAUserInput, for user input
      */
+    @Inject
     public ViewTopicsHandler(TopicDao topicDao, ATAUserInput userHandler) {
         this.topicDao = topicDao;
         this.userHandler = userHandler;

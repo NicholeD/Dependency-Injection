@@ -8,7 +8,11 @@ import dagger.Provides;
 
 import javax.inject.Singleton;
 
-
+@Module
 public class MapperModule {
-
+    @Provides
+    @Singleton
+    public DynamoDBMapper provideMapper() {
+        return new DynamoDBMapper(DynamoDbClientProvider.getDynamoDBClient());
+    }
 }

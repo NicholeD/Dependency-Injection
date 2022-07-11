@@ -6,7 +6,11 @@ import dagger.Provides;
 
 import javax.inject.Singleton;
 
-
+@Module
 public class ATAUserInputModule {
-
+    @Singleton
+    @Provides
+    public ATAUserInput provideATAUserInput() {
+        return new ATAUserInput();
+    }
 }

@@ -17,6 +17,7 @@ public class TopicDao {
      * Constructs a TopicDao with the given DynamoDBMapper.
      * @param mapper the DynamoDBMapper
      */
+    @Inject
     public TopicDao(DynamoDBMapper mapper) {
         this.mapper = mapper;
     }

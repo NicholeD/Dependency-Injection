@@ -5,6 +5,7 @@ import com.kenzie.groupwork.discussioncli.cli.DiscussionCliState;
 /**
  * General interface for the Handler classes.
  */
+
 public interface DiscussionCliOperationHandler {
     /**
      * Handles the relevant operation requested and returns response to be displayed to

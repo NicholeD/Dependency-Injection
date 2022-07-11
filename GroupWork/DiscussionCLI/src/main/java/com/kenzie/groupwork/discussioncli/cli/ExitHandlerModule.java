@@ -6,6 +6,12 @@ import dagger.Provides;
 
 import javax.inject.Singleton;
 
+@Module
 public class ExitHandlerModule {
 
+    @Singleton
+    @Provides
+    public ExitHandler provideExitHandler() {
+        return new ExitHandler();
+    }
 }
