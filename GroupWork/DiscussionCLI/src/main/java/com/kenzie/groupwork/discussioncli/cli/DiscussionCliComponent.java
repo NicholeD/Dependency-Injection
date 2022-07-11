@@ -24,4 +24,5 @@ public interface DiscussionCliComponent {
     ChangeTopicHandler provideChangeTopicHandler();
     ATAUserInput provideATAUserInput();
     ExitHandler provideExitHandler();
+    DiscussionCliState state = new DiscussionCliState();
 }

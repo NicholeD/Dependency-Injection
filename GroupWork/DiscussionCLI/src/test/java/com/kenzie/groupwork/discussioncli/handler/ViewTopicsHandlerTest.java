@@ -28,7 +28,7 @@ public class ViewTopicsHandlerTest {
     private ATAUserInput userHandler;
 
     @BeforeEach
-    private void setup() {
+    void setup() {
         initMocks(this);
         handler = new ViewTopicsHandler(topicDao, userHandler);
         state = getCliState();

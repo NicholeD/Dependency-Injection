@@ -40,5 +40,11 @@ public class TopicMessageDao {
         return new ArrayList<>(mapper.query(TopicMessage.class, query));
     }
 
-    // PARTICIPANTS: A method does not yet exist to save a TopicMessage to our Messages table
+    public TopicMessage saveTopicMessage(TopicMessage topicMessage) {
+        if (topicMessage.getTopicName() == null | topicMessage.getAuthor() == null | topicMessage.getMessageContent() == null) {
+            throw new IllegalArgumentException("Topic message have null field(s): " + topicMessage);
+        }
+        mapper.save(topicMessage);
+        return topicMessage;
+    }
 }

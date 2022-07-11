@@ -27,7 +27,7 @@ public class CreateTopicMessageHandlerTest {
     private TopicMessageDao topicMessageDao;
 
     @BeforeEach
-    private void setup() {
+     void setup() {
         initMocks(this);
         handler = new CreateTopicMessageHandler(userHandler);
         state = getState();

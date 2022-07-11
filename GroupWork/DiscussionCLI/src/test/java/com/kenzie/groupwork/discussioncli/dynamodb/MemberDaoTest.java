@@ -19,7 +19,7 @@ public class MemberDaoTest {
     private DynamoDBMapper mapper;
 
     @BeforeEach
-    private void setup() {
+     void setup() {
         initMocks(this);
         memberDao = new MemberDao(mapper);
     }

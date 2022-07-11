@@ -28,9 +28,8 @@ public class TopicDao {
      * @return The topic that was created
      */
     public Topic createTopic(Topic topic) {
-
-        return null;
-
+        mapper.save(topic);
+        return topic;
     }
 
     /**

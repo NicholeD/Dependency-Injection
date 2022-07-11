@@ -4,12 +4,15 @@ import com.kenzie.groupwork.discussioncli.dynamodb.Member;
 import com.kenzie.groupwork.discussioncli.dynamodb.Topic;
 import com.kenzie.groupwork.discussioncli.dynamodb.TopicMessage;
 
+import javax.inject.Inject;
+import javax.inject.Singleton;
 import java.util.List;
 
 /**
  * Contains the runtime state, particularly user, current/available topic/s, and
  * next operation, for an instance of DiscussionCli.
  */
+@Singleton
 public class DiscussionCliState {
     private Member currentMember;
     private Topic currentTopic;

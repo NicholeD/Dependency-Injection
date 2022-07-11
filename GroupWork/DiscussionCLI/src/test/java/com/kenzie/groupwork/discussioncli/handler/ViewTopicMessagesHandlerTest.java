@@ -26,7 +26,7 @@ public class ViewTopicMessagesHandlerTest {
     private TopicMessageDao topicMessageDao;
 
     @BeforeEach
-    private void setup() {
+    void setup() {
         initMocks(this);
         handler = new ViewTopicMessagesHandler(topicMessageDao);
         state = new DiscussionCliState();

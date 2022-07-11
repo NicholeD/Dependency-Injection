@@ -26,7 +26,7 @@ public class CreateTopicHandlerTest {
     private ATAUserInput userHandler;
 
     @BeforeEach
-    private void setup() {
+     void setup() {
         initMocks(this);
         handler = new CreateTopicHandler(topicDao, userHandler);
         state = getState();

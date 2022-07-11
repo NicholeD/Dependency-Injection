@@ -28,7 +28,7 @@ public class ChangeTopicHandlerTest {
     private ATAUserInput userHandler;
 
     @BeforeEach
-    private void setup() {
+     void setup() {
         initMocks(this);
         handler = new ChangeTopicHandler(userHandler);
         state = getState();

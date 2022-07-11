@@ -29,7 +29,7 @@ public class LoginHandlerTest {
     private ATAUserInput userHandler;
 
     @BeforeEach
-    private void setup() {
+    void setup() {
         initMocks(this);
         handler = new LoginHandler(memberDao, userHandler);
         state = getCliState();
