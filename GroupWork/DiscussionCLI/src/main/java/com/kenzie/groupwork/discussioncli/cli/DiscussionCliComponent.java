@@ -16,13 +16,5 @@ import javax.inject.Singleton;
 @Singleton
 @Component(modules = {ExitHandlerModule.class, MapperModule.class, ATAUserInputModule.class})
 public interface DiscussionCliComponent {
-    ViewTopicsHandler provideViewTopicsHandler();
-    ViewTopicMessagesHandler provideViewTopicMessageHandler();
-    CreateTopicMessageHandler provideCreateTopicMessageHandler();
-    LoginHandler provideLoginHandler();
-    CreateTopicHandler provideCreateTopicHandler();
-    ChangeTopicHandler provideChangeTopicHandler();
-    ATAUserInput provideATAUserInput();
-    ExitHandler provideExitHandler();
-    DiscussionCliState state = new DiscussionCliState();
+    DiscussionCli provideDiscussionCli();
 }

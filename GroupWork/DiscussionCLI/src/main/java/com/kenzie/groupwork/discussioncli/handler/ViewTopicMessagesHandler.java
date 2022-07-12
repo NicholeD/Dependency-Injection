@@ -16,14 +16,16 @@ import java.util.List;
  */
 public class ViewTopicMessagesHandler implements DiscussionCliOperationHandler {
     private TopicMessageDao topicMessageDao;
+    private DiscussionCliState state;
 
     /**
      * Constructs handler with its dependencies.
      * @param topicMessageDao TopicMessageDao
      */
     @Inject
-    public ViewTopicMessagesHandler(TopicMessageDao topicMessageDao) {
+    public ViewTopicMessagesHandler(TopicMessageDao topicMessageDao, DiscussionCliState state) {
         this.topicMessageDao = topicMessageDao;
+        this.state = state;
     }
 
     @Override

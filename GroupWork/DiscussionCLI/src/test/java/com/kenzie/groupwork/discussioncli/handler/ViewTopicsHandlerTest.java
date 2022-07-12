@@ -30,7 +30,7 @@ public class ViewTopicsHandlerTest {
     @BeforeEach
     void setup() {
         initMocks(this);
-        handler = new ViewTopicsHandler(topicDao, userHandler);
+        handler = new ViewTopicsHandler(topicDao, userHandler, state);
         state = getCliState();
     }
 

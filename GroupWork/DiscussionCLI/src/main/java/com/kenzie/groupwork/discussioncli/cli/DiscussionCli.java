@@ -10,6 +10,7 @@ import com.kenzie.groupwork.discussioncli.handler.ViewTopicMessagesHandler;
 import com.kenzie.groupwork.discussioncli.handler.ViewTopicsHandler;
 import com.kenzie.input.console.ATAUserInput;
 
+import javax.inject.Inject;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -46,6 +47,7 @@ public class DiscussionCli {
      * @param exitHandler Handler to exit the CLI
      * @param state Tracks the internal state of the Discussion CLI
      */
+    @Inject
     public DiscussionCli(final ATAUserInput userHandler,
                          final LoginHandler loginHandler,
                          final ViewTopicsHandler viewTopicsHandler,

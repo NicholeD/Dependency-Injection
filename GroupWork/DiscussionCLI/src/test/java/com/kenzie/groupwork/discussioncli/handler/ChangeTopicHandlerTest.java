@@ -30,7 +30,7 @@ public class ChangeTopicHandlerTest {
     @BeforeEach
      void setup() {
         initMocks(this);
-        handler = new ChangeTopicHandler(userHandler);
+        handler = new ChangeTopicHandler(userHandler, state);
         state = getState();
     }
 

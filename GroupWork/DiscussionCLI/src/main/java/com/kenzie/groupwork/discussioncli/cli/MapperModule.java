@@ -10,8 +10,8 @@ import javax.inject.Singleton;
 
 @Module
 public class MapperModule {
-    @Provides
     @Singleton
+    @Provides
     public DynamoDBMapper provideMapper() {
         return new DynamoDBMapper(DynamoDbClientProvider.getDynamoDBClient());
     }

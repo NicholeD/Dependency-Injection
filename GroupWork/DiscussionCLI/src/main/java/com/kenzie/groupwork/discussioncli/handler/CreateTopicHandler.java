@@ -13,6 +13,7 @@ import javax.inject.Inject;
 public class CreateTopicHandler implements DiscussionCliOperationHandler {
     private final TopicDao topicDao;
     private final ATAUserInput userHandler;
+    private DiscussionCliState state;
 
     /**
      * Constructs handler with its dependencies.
@@ -20,9 +21,10 @@ public class CreateTopicHandler implements DiscussionCliOperationHandler {
      * @param userHandler the ATAUserInput, for user input
      */
     @Inject
-    public CreateTopicHandler(TopicDao topicDao, ATAUserInput userHandler) {
+    public CreateTopicHandler(TopicDao topicDao, ATAUserInput userHandler, DiscussionCliState state) {
         this.topicDao = topicDao;
         this.userHandler = userHandler;
+        this.state = state;
     }
 
     @Override

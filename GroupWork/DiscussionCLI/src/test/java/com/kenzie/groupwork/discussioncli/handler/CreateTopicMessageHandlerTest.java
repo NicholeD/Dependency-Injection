@@ -29,7 +29,7 @@ public class CreateTopicMessageHandlerTest {
     @BeforeEach
      void setup() {
         initMocks(this);
-        handler = new CreateTopicMessageHandler(userHandler);
+        handler = new CreateTopicMessageHandler(userHandler, state, topicMessageDao);
         state = getState();
     }
 

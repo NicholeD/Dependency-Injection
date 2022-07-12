@@ -12,14 +12,16 @@ import javax.inject.Inject;
  */
 public class ChangeTopicHandler implements DiscussionCliOperationHandler {
     private ATAUserInput userHandler;
+    private DiscussionCliState state;
 
     /**
      * Constructs handler with its dependencies.
      * @param userHandler the ATAUserInput, for user input
      */
     @Inject
-    public ChangeTopicHandler(ATAUserInput userHandler) {
+    public ChangeTopicHandler(ATAUserInput userHandler, DiscussionCliState state) {
         this.userHandler = userHandler;
+        this.state = state;
     }
 
     @Override

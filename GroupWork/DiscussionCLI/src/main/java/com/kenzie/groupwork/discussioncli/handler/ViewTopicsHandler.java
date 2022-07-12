@@ -21,6 +21,7 @@ public class ViewTopicsHandler implements DiscussionCliOperationHandler {
 
     private final TopicDao topicDao;
     private final ATAUserInput userHandler;
+    private DiscussionCliState state;
 
     /**
      * Constructs handler with its dependencies.
@@ -28,9 +29,10 @@ public class ViewTopicsHandler implements DiscussionCliOperationHandler {
      * @param userHandler the ATAUserInput, for user input
      */
     @Inject
-    public ViewTopicsHandler(TopicDao topicDao, ATAUserInput userHandler) {
+    public ViewTopicsHandler(TopicDao topicDao, ATAUserInput userHandler, DiscussionCliState state) {
         this.topicDao = topicDao;
         this.userHandler = userHandler;
+        this.state = state;
     }
 
     @Override

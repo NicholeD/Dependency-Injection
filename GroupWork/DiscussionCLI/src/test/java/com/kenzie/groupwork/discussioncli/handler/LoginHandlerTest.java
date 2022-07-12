@@ -31,7 +31,7 @@ public class LoginHandlerTest {
     @BeforeEach
     void setup() {
         initMocks(this);
-        handler = new LoginHandler(memberDao, userHandler);
+        handler = new LoginHandler(memberDao, userHandler, state);
         state = getCliState();
     }
 

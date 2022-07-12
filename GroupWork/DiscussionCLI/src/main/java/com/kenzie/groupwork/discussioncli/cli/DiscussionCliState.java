@@ -20,6 +20,11 @@ public class DiscussionCliState {
     private List<TopicMessage> listedTopicMessages;
     private DiscussionCliOperation nextOperation;
 
+    @Inject
+    public DiscussionCliState() {
+
+    }
+
     public Member getCurrentMember() {
         return currentMember;
     }
