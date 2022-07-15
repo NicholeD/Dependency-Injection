@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "DependencyInjection&#45;Payroll&#45;Test",
+      "setup": "",
+      "run": "./gradlew dependencyinjection-payroll-test ",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 11,
+      "points": null
+    },
+    {
+      "name": "LinkedList-LunchClub-Test",
+      "setup": "",
+      "run": "./gradlew linkedlist-lunchclub-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "LinkedList-TheShowdown-Test",
+      "setup": "",
+      "run": "./gradlew linkedlist-theshowdown-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Searching-PackageSearch1-Test",
+      "setup": "",
+      "run": "./gradlew searching-packagesearch-1-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Searching-PackageSearch2-Test",
+      "setup": "",
+      "run": "./gradlew searching-packagesearch-2-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    },
+    {
+      "name": "Groupwork Discussion CLI Unit Tests",
+      "setup": "",
+      "run": "./gradlew groupwork-discussioncli-test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": null
+    }
+  ]
+}
